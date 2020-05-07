@@ -32,3 +32,25 @@ image: AssetImage('images/diamond.png'),
 
 Wrap the SafeArea() widget around any widget, so that it doesn't overlap with system resources such as the topBar, navigationBar, notch area, etc.
 > Just Alt+Enter on any widget, select 'Wrap with widget' and rename widget to SafeArea
+
+> Declaring and not initializing a variable in Dart creates a dynamic variable i.e., it's data type can be changed at a later point of time.
+
+### Polymorphism in dart
+```dart
+class Car{
+	int seats=5;
+	void drive(){
+		print('Start Engine');
+	}
+}
+class Tesla extends Car{
+@override //Uses the below function if it is overloaded 
+//with a function from the parent class
+void drive(){ //Overloading as drive() exists in car
+	super.drive();//Calls() drive of parent. 'super' points 
+	//to parent class
+	print('Autopilot engaged');
+	}
+}
+```
+In the above snippet, when the drive function of a `Tesla` object is called, Engine is started (as inherited from `Car`) and Autopilot is engaged as it comes under `drive()` of `Tesla`. A `Car` object can not engage Autopilot
