@@ -69,7 +69,7 @@ class ItemTile extends StatelessWidget {
                 content: Text(favoritesList.items.contains(itemNo)
                     ? 'Added to favorites.'
                     : 'Removed from favorites.'),
-                duration: const Duration(milliseconds: 500),
+                duration: const Duration(seconds: 1),
               ),
             );
           },
